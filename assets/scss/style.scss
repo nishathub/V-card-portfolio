@@ -1,0 +1,16 @@
+@import "./pages/index";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./abstracts/variables";
+@import "./components/buttons";
+@import "./layouts/headers";
+@import "./layouts/footers";
+@import "./mixins/responsive";
+@import "./mixins/mix_button";
+
+
+body{
+    padding: 5px;
+    background-color: skyblue;
+    height: 100vh;
+}
