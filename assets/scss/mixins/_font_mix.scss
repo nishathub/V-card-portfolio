@@ -2,12 +2,12 @@
 @import '../mixins/common_mix';
 @import '../mixins/responsive';
 
-@mixin font($cl,$fm,$sz,$stl,$wt,$lh: 30px,$ls: 0.5px){
+@mixin font($cl: $black,$sz,$wt: normal,$lh: normal,$ls:normal){
 
     color: $cl;
-    font-family: $fm;
+    font-family: $poppins;
     font-size: $sz;
-    font-style: $stl;
+    font-style: normal;
     font-weight: $wt;
     line-height: $lh;
     letter-spacing: $ls;

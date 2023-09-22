@@ -1,0 +1,64 @@
+@use '../components/buttons';
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+@import '../mixins/font_mix';
+
+
+header{
+    border-top: 2px solid $green_dp;
+    .container{
+
+        nav{
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .left{
+
+                .logo{
+                    height: 48px;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+            .right{
+
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                    li{
+
+                        margin: 0px 5px;
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+
+                        a{
+
+                            @include font($black,14px,bold);
+                            text-transform: uppercase;
+                            
+                            // @include button($border: transparent);
+                            @include n_btn($border:  transparent, $txt_c: $black, $bg_c: transparent, $radius: 35px);
+                            // @extend .button;
+
+                            @include tr();
+                            
+                           &:hover {
+                            @extend .btn-green;
+                           }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

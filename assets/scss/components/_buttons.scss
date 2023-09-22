@@ -1,14 +1,79 @@
-@import "../abstracts/variables";
+@use "sass:map";
 @import "../mixins/mix_button";
+@import "../abstracts/variables";
 
 
-//                         (bg_color, border)
-.btn_1{
-    @include master_button($red, $green);
+// @mixin create_button($btn_nm: false,$text_clr: false,$bg_clr: false){
+
+//     .btn-#{$btn_nm}{
+//         color: $text_clr;
+//         background-color: $bg_clr;
+//     }
+// }
+
+// @each $btn_nm in $color_names{
+//     @include create_button($btn_nm, map.get($color_values,$btn_nm+ '_dp'), map.get($color_values,$btn_nm+ '_lt'));
+// }
+
+// @each $btn_nm, $btn_color in $btn_colors {
+//     @include create_button($btn_nm, $btn_color, $btn_color);
+//   }
+
+
+
+@mixin create_button($btn_nm: false, $text_clr: false, $bg_clr: false) {
+  .btn-#{$btn_nm} {
+    color: $text_clr;
+    background-color: $bg_clr;
+    
+  }
 }
-.btn_2{
-    @include master_button($blue, $black);
+
+@each $btn_nm in $color_names {
+  @include create_button($btn_nm, map.get($color_values, $btn_nm + '_dp'), map.get($color_values, $btn_nm + '_lt'));
 }
-.btn_3{
-    @include master_button($white, $grey);
+
+
+// ANOTHER BUTTON 
+
+// @mixin button($border: black, $color: $black){
+//   color: $color;
+//   font-size: 12px;
+//   padding: 10px 20px;
+//   border-radius: 35px;
+//   border: 1px solid $border;
+// }
+
+// @mixin btn_hover($txt_clr, $bg_clr){
+//   color: $txt_clr;
+//   background-color: $bg_clr;
+// }
+
+// @mixin btn_outline($btn_style, $border: map.get($color_values, $btn_style+ '_dp', $background: map.get($btn_style, $color_values, $btn_style + '_lt')))
+// {
+//   color: map.get($color_values, $btn_style + '_dp');
+//   border: 1px solid $border;
+//   background: $background;
+
+// }
+
+@mixin n_btn($border:  red, $txt_c: $white, $bg_c: $black, $radius: 35px){
+  border:1px solid $border;
+  color: $txt_c;
+  background-color: $bg_c;
+  border-radius: $radius;
+  padding: 8px 30px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: $poppins;
+}
+
+@mixin btn_outline($border: red, $bg: transparent){
+  border: 1px solid $border;
+  background-color: $bg;
+}
+@mixin btn_fill($txt: red, $bg: blue){
+  border: unset;
+  color: $txt;
+  background-color: $bg;
 }

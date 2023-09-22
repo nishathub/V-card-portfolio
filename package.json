@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass assets/scss/style.scss assets/styles/style.css -w --style compressed",
+    "sass": "sass --watch assets/scss/style.scss assets/styles/style.css --style compressed",
     "postcss": "postcss assets/styles/style.css -o assets/styles/style.css -w"
   },
   "keywords": [],

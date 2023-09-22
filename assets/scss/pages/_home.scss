@@ -1,0 +1,183 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/font_mix';
+@import '../mixins/responsive';
+@import '../mixins/mix_button';
+
+#home_main{
+
+    .container{
+// display: flex;
+// flex-wrap: wrap;
+// justify-content: center;
+        .section_wrapper{
+            height: 100%;
+            width: 100%;
+            max-width: 880px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+            padding: 30px 0px;
+            
+            .left, 
+            .right{
+                padding: 0px 17px;
+            }
+            .left{
+                
+                .common_card{
+                    padding: 80px 50px;
+                // @include border();
+                text-align: center;
+                height: 100%;
+                
+                    
+                    .profile_image{
+                        
+                        margin-bottom: 40px;
+                        div{
+                            border-radius: 50%;
+                            display: inline-block;
+                            
+                        }
+                        .circle_1{
+                            border: 4px solid $green_lt;
+                            .circle_2{
+                                border: 20px solid $white;
+                                .circle_3{
+                                    border: 15px solid $green_dp;
+                                    .circle_4{
+                                        border: 20px solid $green_lt;
+                                        height: 105px;
+                                        .img{
+                                        
+                                            height: 65px;
+                                            width: 65px;
+                                            background-image: url('https://wallpapers.com/images/hd/instagram-profile-pictures-bs66x9iszscr5cj4.jpg');
+                                            background-position: top;
+                                            background-size: cover;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .profile_info{
+                        // text-align: center;
+                        h1{
+                            @include font($green_dp,32px,bold);
+                            margin-bottom: 25px;
+                        }
+                        h2{
+                            @include font($black,16px,bold);
+                        }
+                    }
+
+                }
+            }
+
+            .right{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                // max-width: 717px;
+                .profile_details{
+
+                    h2{
+                        @include font($black,18px,bold);
+                        text-transform: capitalize;
+                        margin-bottom: 30px;
+                    }
+                    table{
+                        font-family: $poppins;
+                        tr{
+
+                            td{
+                                padding: 0px 20px 10px 0px;
+                                i{
+                                    font-size: 15px;
+                                    height: 30px;
+                                    width: 30px;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    background-color: $green_tr;
+                                    color: $green_dp;
+                                    border-radius: 50%;
+                                }
+                                // &:nth-child(1){}
+                                &:nth-child(2){
+                                    @include font($black,12px,bold)
+                                }
+                                &:nth-child(3){
+                                    @include font($black,16px,bold)
+                                }
+                                &:nth-child(4){
+                                    @include font($black,14px,bold)
+                                }
+                            }
+                        }
+                    }
+
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li{
+                            margin-top: 10px;
+                            margin-right: 10px;
+                            
+                            a{
+
+                                @include n_btn(unset);
+                            }
+
+                            &:nth-child(1) a {
+                                
+                                @include btn_fill($yellow_dp,$yellow_lt);
+
+                                &:hover{
+
+                                    @include btn_outline($yellow_dp);
+                                }
+                            }
+                            &:nth-child(2) a{
+                                @include btn_fill($red_dp,$red_lt);
+
+                                &:hover{
+
+                                    @include btn_outline($red_dp);
+                                }
+                            }
+                            &:nth-child(3) a{
+                                @include btn_fill($green_dp,$green_lt);
+
+                                &:hover{
+
+                                    @include btn_outline($green_dp);
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .objective_info{
+
+                    h2{
+                        @include font($black,18px,bold);
+                        text-transform: capitalize;
+                        margin-bottom: 30px;
+                    }
+                    p{
+                        @include font($black, 16px, normal, 26px)
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,16 +1,23 @@
-@import "./pages/index";
-@import "./pages/about";
-@import "./pages/contact";
+@import "./core/reset";
 @import "./abstracts/variables";
-@import "./components/buttons";
-@import "./layouts/headers";
-@import "./layouts/footers";
+@import "./core/typography";
 @import "./mixins/responsive";
 @import "./mixins/mix_button";
+@import "./mixins/common_mix";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./vendors/grid";
+@import "./vendors/frameworks";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/home";
+@import "./layouts/header";
 
 
 body{
+    
     padding: 5px;
     background-color: skyblue;
     height: 100vh;
+
 }

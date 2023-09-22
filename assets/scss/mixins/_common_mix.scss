@@ -8,6 +8,7 @@
 
 }
 
-@mixin tr($tr: .5s){
-    transition-duration: $tr;
+@mixin tr($tr: .3s){
+    transition: all linear $tr;
+
 }

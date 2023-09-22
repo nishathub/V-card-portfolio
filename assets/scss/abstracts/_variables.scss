@@ -1,6 +1,35 @@
-$white: white;
-$black: black;
-$red: red;
-$blue: blue;
-$green: green;
-$grey: grey;
+
+// FONT 
+
+$poppins: 'Poppins', sans-serif;
+
+// COLOR 
+
+$green_dp: green;
+$green_lt:rgba(65, 255, 65, 0.477);
+$green_tr:rgba(100, 169, 100, 0.442);
+$black: rgb(10, 10, 10);
+$white: rgb(245, 245, 245);
+$yellow_dp: rgb(196, 164, 2);
+$yellow_lt: rgba(255, 255, 86, 0.607);
+$red_dp: rgb(151, 0, 0);
+$red_lt: rgba(255, 128, 128, 0.457);
+
+$color_names: yellow,green,red;
+
+
+$color_values: (
+    green_dp: rgb(0, 80, 0),
+    green_lt: rgb(71, 184, 71),
+    yellow_dp: rgb(130, 130, 0),
+    yellow_lt: rgb(209, 209, 115),
+    red_dp: rgb(151, 0, 0),
+    red_lt: rgb(204, 109, 109)
+);
+
+// GRID COLUMN 
+
+$total_grid: 12;
+
+$break_points:( "null":0px, "xs": 320px, "sm": 576px, "md": 768px, "lg": 992px, "xl": 1200px, "xxl": 1400px);
+$screen_names: null, xs, sm, md, lg, xl, xxl;
