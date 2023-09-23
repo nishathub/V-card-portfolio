@@ -20,6 +20,10 @@ header{
             justify-content: space-between;
             align-items: center;
 
+            @include custom_responsive(0px, 768px){
+                justify-content: flex-start;
+            }
+
             .left{
 
                 .logo{
