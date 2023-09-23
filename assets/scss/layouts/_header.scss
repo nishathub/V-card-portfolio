@@ -7,11 +7,13 @@
 
 header{
     border-top: 2px solid $green_dp;
+    position: relative;
     .container{
 
         nav{
             height: 100%;
             width: 100%;
+            padding-top: 10px;
 
             display: flex;
             flex-wrap: wrap;
@@ -27,8 +29,22 @@ header{
                     }
                 }
             }
+            .middle{
+                a{
+                    
+                    @include n_btn(transparent,$black,$red_lt);
+
+                    body.theme_2 &{
+                        @include n_btn(transparent,$white,$green_lt)
+                    }
+                    
+                }
+            }
             .right{
 
+                @include custom_responsive(0px,768px){
+                    display: none;
+                }
                 ul{
                     display: flex;
                     flex-wrap: wrap;
@@ -44,6 +60,10 @@ header{
 
                             @include font($black,14px,bold);
                             text-transform: uppercase;
+
+                            body.theme_2 &{
+                                color: $white;
+                            }
                             
                             // @include button($border: transparent);
                             @include n_btn($border:  transparent, $txt_c: $black, $bg_c: transparent, $radius: 35px);
@@ -53,6 +73,10 @@ header{
                             
                            &:hover {
                             @extend .btn-green;
+
+                            body.theme_2 &{
+                                @extend .btn-red;
+                            }
                            }
 
                         }

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <title>V-card</title>
 </head>
-<body>
+<body class="">
+
     <!-- <div class="div">
         <h2 class="h2-1">Check Font Family</h2>
         <h2 class="h2-2">Check Font Family</h2>
@@ -47,6 +48,21 @@
         </div>
     </div> -->
     
+      <!-- HIDDEN NAVBAR  -->
+
+      <div id="nav_bar" class="">
+        <ul class="nav_list">
+
+            <a id="nav_close_mark" class="" href="#"><i onclick="nav_bar.classList.remove('active_nav')"  class="fa-solid fa-xmark"></i></a>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">contact</a></li>
+
+        </ul>
+    </div>
+
     <header id="header">
         <div class="container">
             <nav class="nav">
@@ -55,6 +71,9 @@
                         <img src="https://sass-lang.com/assets/img/logos/logo.svg" alt="logo">
                     </div>
                 </div>
+                <div class="middle">
+                    <a id="version_btn" href="#">Change Version</a>
+                </div>
                 <div class="right">
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -62,6 +81,11 @@
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
+                </div>
+
+                <!-- HIDDEN NAV ICON  -->
+                <div class="nav_icon">
+                    <a href="#"><i onclick="nav_bar.classList.add('active_nav')" class="fa-solid fa-bars"></i></a>
                 </div>
             </nav>
         </div>
@@ -160,5 +184,26 @@
             </section>
         </div>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_contents">
+                <div class="left">
+                    <p>@2023 copyright Mr. Smith</p>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/nav_bar.js"></script>
+    <script src="./assets/js/version.js"></script>
 </body>
 </html>

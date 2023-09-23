@@ -13,7 +13,7 @@
     width: 200px;
     // transform: scale(0);
     border-radius: 10px;
-    background-color: rgba(9, 75, 114, 0.591);
+    background-color: $green_tr;
     backdrop-filter: blur(10px);
     transition-duration: right 0.4s;
     z-index: 999;
@@ -34,7 +34,7 @@
 
         i {
             font-size: 40px;
-            color: $white;
+            color: $red_dp;
         }
     }
 
@@ -45,7 +45,7 @@
             margin: 50px 30px;
 
             a {
-                @include font($white, $poppins, 18px, normal, 400);
+                @include font($green_dp, $poppins, 18px, normal, 400);
                 text-transform: uppercase;
 
             }
@@ -53,7 +53,7 @@
     }
 }
 
-.header_box {
+nav {
 
     .nav_icon {
         display: none;
@@ -63,25 +63,22 @@
 
         
 
-        @include xs() {
+        @include custom_responsive(0px, 768px) {
             display: inline-block;
             position: absolute;
-
-
-
         }
 
-        @include sm() {
-            display: inline-block;
-            position: absolute;
 
-        }
 
         a {
 
             i {
                 font-size: 24px;
-                color: $brand_deep;
+                color: $black;
+
+                &:hover{
+                    color: $yellow_dp;
+                }
 
                 body.dark & {  
                     color: $white;

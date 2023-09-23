@@ -12,12 +12,14 @@
 @import "./pages/contact";
 @import "./pages/home";
 @import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/nav_button";
+@import "./layouts/wrapper";
 
 
 body{
     
     padding: 5px;
-    background-color: skyblue;
-    height: 100vh;
-
+    // background-color: skyblue;
+    height: 100%;
 }
