@@ -38,8 +38,17 @@ header{
                     
                     @include n_btn(transparent,$black,$red_lt);
 
+                    &:hover{
+                        @include btn_outline($yellow_dp);
+                    }
+
                     body.theme_2 &{
-                        @include n_btn(transparent,$white,$green_lt)
+                        @include n_btn(transparent,$white,$green_lt);
+
+                        &:hover{
+                            @include btn_outline($yellow_dp);
+                        }
+
                     }
                     
                 }

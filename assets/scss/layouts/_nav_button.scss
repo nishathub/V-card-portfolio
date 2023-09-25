@@ -25,6 +25,9 @@
     &.active_nav {
         right: 15px;
     }
+    body.theme_2 & {  
+        background-color: $green_tr;
+    }
 
     #nav_close_mark {
 
@@ -35,6 +38,10 @@
         i {
             font-size: 40px;
             color: $red_dp;
+
+            body.theme_2 & {  
+                color: $white;
+            }
         }
     }
 
@@ -48,6 +55,9 @@
                 @include font($green_dp, $poppins, 18px, normal, 400);
                 text-transform: uppercase;
 
+                body.theme_2 & {  
+                    color: $white;
+                }
             }
         }
     }
@@ -75,12 +85,13 @@ nav {
             i {
                 font-size: 24px;
                 color: $black;
+                
 
                 &:hover{
                     color: $yellow_dp;
                 }
 
-                body.dark & {  
+                body.theme_2 & {  
                     color: $white;
                 }
             }
